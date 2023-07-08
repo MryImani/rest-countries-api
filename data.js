@@ -16829,7 +16829,7 @@ export function getAllCountries() {
 
 export function getCountryByName(name) {
   return countries.find(
-    (country) => country.name.toLocaleLowerCase() === name.toLocaleLowerCase()
+    (country) => country.name === name
   );
 }
 
