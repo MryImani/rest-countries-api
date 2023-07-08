@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import Header from "../global/Header";
 
 export default function MainLayout(props) {
-    const [theme,setTheme] = useState('Dark');
+    const [theme,setTheme] = useState('Light');
     const handleChangeTheme = () => {
         if(theme === 'Dark')
         {
@@ -16,7 +16,7 @@ export default function MainLayout(props) {
     return (
       <Fragment>
         <Header theme={theme} changeTheme={handleChangeTheme} />
-        <main>{props.children}</main>
+        <main >{props.children}</main>
       </Fragment>
     );
 }

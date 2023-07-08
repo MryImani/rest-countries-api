@@ -22,7 +22,7 @@ export default function Header(props) {
       <nav className={props.theme === "Dark" ? " text-white" : ""}>
         <button className="flex items-center" onClick={props.changeTheme}>
           <BsMoon className="mr-2" />
-          <span className="font-semibold">{props.theme} Mode</span>
+          <span className="font-semibold">{props.theme === 'Dark' ? "Light" : "Dark"} Mode</span>
         </button>
       </nav>
     </header>
