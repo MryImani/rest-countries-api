@@ -5,7 +5,7 @@ export default function Filter(props){
     }
   return (
     <select
-      className="py-3 px-6 shadow-xl rounded-md w-52"
+      className="py-3 px-6 shadow-xl rounded-md w-52 mt-12 lg:mt-0"
       onChange={onOptionChangeHandler}
     >
       <option value="all">Filter by Region</option>

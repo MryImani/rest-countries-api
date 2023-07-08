@@ -12,7 +12,7 @@ export default function SearchBar(props) {
     props.submit(value);
   };
   return (
-    <form className=" w-4/12" onSubmit={handleSubmit}>
+    <form className="w-full lg:w-4/12" onSubmit={handleSubmit}>
       <div className="form-control flex items-center bg-white py-3 px-6 shadow-xl rounded-md">
         <AiOutlineSearch />
         <input

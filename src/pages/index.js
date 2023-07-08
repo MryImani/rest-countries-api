@@ -37,7 +37,7 @@ export default function Home() {
  }
    return (
      <section className="home px-8 md:px-20 py-12">
-       <div className="flex items-center justify-between">
+       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
          <SearchBar submit={submitHandler} />
          <Filter filter={filterHandler}/>
        </div>
