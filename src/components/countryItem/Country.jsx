@@ -1,15 +1,21 @@
 import Image from "next/image";
-import classes from './country.module.css'
 import Link from "next/link";
 export default function Country(props){
-    const { flag, name,nativeName, population, region, capital } = props.country;
+    const { flag, name, nativeName, population, region, capital, theme } =
+      props.country;
     const urlPath = `/country/${name}`;
     return (
       <Link href={urlPath}>
-        <div className={`${classes.country} rounded-md bg-white shadow-sm`}>
+        <div
+          className={
+            theme === "Dark"
+              ? "country rounded-md bg-header-dark shadow-sm "
+              : "country rounded-md bg-white shadow-sm "
+          }
+        >
           <div className="">
             <Image
-              className=" rounded-t-md img-fluid w-full "
+              className=" rounded-t-md img-fluid w-full h-48"
               src={flag}
               alt={`${name}-flag`}
               width={300}
