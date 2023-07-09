@@ -1,6 +1,6 @@
 import ThemeContext from '@/store/theme-context';
 import { useContext } from 'react';
-import {BsMoon} from 'react-icons/bs'
+import { BsMoonFill , BsMoon } from "react-icons/bs";
 export default function Header(props) {
   const themeCxt = useContext(ThemeContext);
   return (
@@ -22,7 +22,8 @@ export default function Header(props) {
       </h1>
       <nav className={themeCxt.isThemeDark ? " text-white" : ""}>
         <button className="flex items-center" onClick={themeCxt.changeTheme}>
-          <BsMoon className="mr-2" />
+          {themeCxt.isThemeDark ? <BsMoonFill className="mr-2 text-white"/> : <BsMoon className="mr-2"/>}
+          
           <span className="font-semibold">
             {themeCxt.isThemeDark ? "Light" : "Dark"} Mode
           </span>
