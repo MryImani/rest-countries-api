@@ -1,22 +1,13 @@
-import { Fragment, useState } from "react";
+import { Fragment} from "react";
 import Header from "../global/Header";
-
+import ThemeContext from "@/store/theme-context";
+import { useContext } from "react";
 export default function MainLayout(props) {
-    const [theme,setTheme] = useState('Light');
-    const handleChangeTheme = () => {
-        if(theme === 'Dark')
-        {
-            setTheme('Light')
-        }
-        else if(theme === 'Light')
-        {
-             setTheme("Dark");
-        }
-    }
+  const themeCxt = useContext(ThemeContext);
     return (
       <Fragment>
-        <Header theme={theme} changeTheme={handleChangeTheme} />
-        <main >{props.children}</main>
+        <Header/>
+        <main className={themeCxt.isThemeDark && "bg-body-bg-dark"} >{props.children}</main>
       </Fragment>
     );
 }
