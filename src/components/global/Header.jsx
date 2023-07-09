@@ -7,15 +7,15 @@ export default function Header(props) {
     <header
       className={
         themeCxt.isThemeDark
-          ? "flex px-8 md:px-20 py-6 justify-between shadow-md bg-header-dark"
-          : "flex px-8 md:px-20 py-6 justify-between shadow-md bg-white"
+          ? "flex items-center px-3 sm:px-20 py-6 justify-between shadow-md bg-header-dark"
+          : "flex items-center px-3 sm:px-20 py-6 justify-between shadow-md bg-white"
       }
     >
       <h1
         className={
           themeCxt.isThemeDark
-            ? "font-bold text-2xl text-white"
-            : " font-bold text-2xl"
+            ? "font-bold sm:text-2xl text-white"
+            : " font-bold sm:text-2xl"
         }
       >
         Where in the world?
