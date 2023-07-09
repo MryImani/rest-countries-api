@@ -16828,7 +16828,9 @@ export function getAllCountries() {
 }
 
 export function getCountryByName(name) {
-  return countries.includes(name);
+  return countries.find(
+    (country) => country.name.toLocaleLowerCase() === name.toLocaleLowerCase()
+  );
 }
 
 export function getAllCountriesInRegion(region) {
