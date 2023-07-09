@@ -16840,3 +16840,8 @@ export function getAllCountriesInRegion(region) {
   return countries.filter((country) => country.region === region);
 }
 
+export function getBorderCountry(border){
+  const country = countries.filter(country => country.alpha3Code === border)
+  return country;
+}
+

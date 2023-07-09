@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getBorderCountry } from "../../../data";
 
 export default function CountryDetails(props) {
   const  theme  = props.theme;
@@ -198,19 +199,25 @@ export default function CountryDetails(props) {
           </p>
           <div className=" flex flex-wrap mt-4 lg:mt-0">
             {borders &&
-              borders.map((border) => (
-                <div
-                  className={
-                    theme
-                      ? " shadow py-1 px-6 mr-2 bg-header-dark mt-2"
-                      : " shadow py-1 px-6 mr-2 mt-2"
-                  }
-                >
-                  <span className={theme ? "text-gray-400" : "text-gray-500"}>
-                    {border}
-                  </span>
-                </div>
-              ))}
+              borders.map((br) => {
+                const border = getBorderCountry(br);
+                return (
+                  <div
+                    className={
+                      theme
+                        ? " shadow py-1 px-6 mr-2 bg-header-dark mt-2"
+                        : " shadow py-1 px-6 mr-2 mt-2"
+                    }
+                  >
+                    <span
+                      key={border[0].translations.br}
+                      className={theme ? "text-gray-400" : "text-gray-500"}
+                    >
+                      {border[0].translations.br}
+                    </span>
+                  </div>
+                );         
+              })}
           </div>
         </div>
       </div>
