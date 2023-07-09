@@ -17,7 +17,7 @@ export default function CountryDetails(props) {
     borders,
   } = props.country;
   return (
-    <div className="country-details grid gap-6 grid-cols-1 lg:grid-cols-2 mt-24 pb-10">
+    <div className="country-details grid gap-6 grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-24 pb-10">
       <div className="">
         <Image
           className="img-fluid w-full"

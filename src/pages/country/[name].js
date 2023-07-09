@@ -11,7 +11,7 @@ export default function CountryDetail(){
     const name = router.query.name;
     const country = getCountryByName(name);
     return (
-      <section className="px-8 md:px-20 pt-16 h-full">
+      <section className="px-8 md:px-20 pt-8 lg:pt-16 h-full">
         <button
           className={
             themeCxt.isThemeDark
