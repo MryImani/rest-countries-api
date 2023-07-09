@@ -29,7 +29,9 @@ export default function CountryDetail(){
             Back
           </span>
         </button>
-        <CountryDetails country={country} theme={themeCxt.isThemeDark} />
+        {country && (
+          <CountryDetails country={country} theme={themeCxt.isThemeDark} />
+        )}
       </section>
     );
 }
